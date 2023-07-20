@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="10dp"
+    android:gravity="right"
+    >
+
+    <TableLayout
+        android:id="@+id/ci_tb_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/chat_message_item_received_rectangle"
+        >
+
+        <TextView
+            android:id="@+id/ci_text_message_body"
+            android:text="text_placeholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="240dp"
+            android:paddingHorizontal="8dp"
+            android:paddingTop="8dp"
+            android:layout_marginRight="12dp"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/ci_hour_tv"
+            android:text="00/00/00 00:00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:gravity="end|bottom"
+            android:textSize="10dp"
+            android:maxWidth="100dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="2dp"
+            />
+
+    </TableLayout>
+
+</LinearLayout>

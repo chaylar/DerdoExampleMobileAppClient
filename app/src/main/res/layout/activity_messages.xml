@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tg.derdoapp.MessagesActivity"
+    android:background="#f5f5f5"
+    android:layout_gravity="center">
+
+    <include
+        android:id="@+id/include_logo"
+        layout="@layout/page_upper_icon"
+        android:layout_width="100dp"
+        android:layout_height="46dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/allContentHolder"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight=".8"
+        android:gravity="fill_vertical"
+
+        app:layout_constraintTop_toBottomOf="@+id/include_logo"
+        app:layout_constraintBottom_toTopOf="@+id/include_nav_menu"
+        >
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="start|center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="Derdolar"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="24dp"
+                android:layout_marginLeft="8dp"
+                />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/messages_ac_fresh_listview"
+            android:scrollbars="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            >
+
+            <!-- NO MESSAGES AREA -->
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <!-- <include
+            android:id="@+id/include_social_nav_bar"
+            layout="@layout/social_requests_nav_menu" /> -->
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="12dp"
+            android:gravity="start|center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="Mesajlar"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="24dp"
+                android:layout_marginLeft="8dp"
+                />
+
+        </LinearLayout>
+
+        <TableLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/messages_list_view_recycler"
+                android:scrollbars="vertical"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <!-- MESSGES AREA -->
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </TableLayout>
+
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/no_content_result_ll"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/include_logo"
+        app:layout_constraintBottom_toTopOf="@id/include_nav_menu"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:gravity="center"
+            android:layout_marginHorizontal="10dp"
+            android:padding="2dp"
+            android:paddingHorizontal="4dp"
+            android:text="Mesajlaşmak için insanlarla selamlaşmalısın derdo"
+            android:textSize="20dp"/>
+
+    </TableLayout>
+
+    <include
+        android:id="@+id/include_nav_menu"
+        layout="@layout/navigation_manu"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="0dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

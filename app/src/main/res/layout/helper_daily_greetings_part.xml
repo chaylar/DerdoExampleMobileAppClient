@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+
+android:id="@+id/showcase_daily_info"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginLeft="4dp"
+android:paddingVertical="4dp"
+android:paddingHorizontal="10dp"
+android:gravity="left|center_vertical"
+app:layout_constraintStart_toStartOf="parent"
+android:background="@drawable/textview_bg_rounded_corners"
+    >
+
+<TextView
+    android:id="@+id/showcase_daily_remaining_title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Bugünlük kalan: "
+    android:textSize="16dp" />
+
+<TextView
+    android:id="@+id/showcase_daily_remaining"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="20dp"
+    android:textStyle="bold"
+    android:text="25"
+    />
+
+<ImageView
+    android:layout_width="24dp"
+    android:layout_height="24dp"
+    android:paddingVertical="2dp"
+    android:src="@drawable/gretings_left_icon"
+    />
+
+<TextView
+    android:id="@+id/showcase_daily_remaining_reset_timer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="4dp"
+    android:textSize="16dp"
+    android:text="(24:00:00)"/>
+
+</LinearLayout>

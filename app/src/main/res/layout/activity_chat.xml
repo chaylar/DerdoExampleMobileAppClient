@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity"
+    android:background="#f5f5f5"
+    >
+
+    <include
+        android:id="@+id/include_logo"
+        layout="@layout/page_upper_icon"
+        android:layout_width="100dp"
+        android:layout_height="46dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/ca_cu_info_container_tb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/underline_bg_layer"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include_logo"
+        android:paddingBottom="10dp"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageButton
+            android:id="@+id/chat_back_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".2"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="4dp"
+            android:padding="6dp"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            android:scaleType="fitCenter"
+            android:background="#f5f5f5"
+            app:srcCompat="@drawable/bck_but_wtail" />
+
+        <!-- <ImageButton
+            android:id="@+id/chat_back_button"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight=".2"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:background="#f5f5f5"
+            app:srcCompat="@drawable/back_button_logo" /> -->
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/ca_chat_user_profilew_image"
+            android:layout_weight=".6"
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:src="@drawable/super_meat_boy"/>
+
+        <ImageButton
+            android:id="@+id/chat_delete_button"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight=".2"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="4dp"
+            android:padding="6dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:background="#f5f5f5"
+            app:srcCompat="@drawable/del_n_block"
+            />
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/ca_chat_user_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Walter"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="18dp"
+                />
+
+        </LinearLayout>
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/ca_nuisance_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ca_cu_info_container_tb"
+        app:layout_constraintBottom_toTopOf="@+id/ca_reyclerview_message_list"
+        >
+
+        <TextView
+            android:id="@+id/ca_user_nuisance_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Boşanma üzerinde eşleştiniz"
+            android:textAllCaps="false"
+            android:gravity="center"
+            android:textColor="#b2b2b2"
+            android:textSize="14dp"
+            />
+
+    </LinearLayout>
+
+    <!-- <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reyclerview_message_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        /> -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ca_reyclerview_message_list"
+        android:scrollbars="vertical"
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/ca_nuisance_name"
+        app:layout_constraintBottom_toTopOf="@+id/ca_hz_line"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+
+        <!-- MESSGES AREA -->
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <!-- A horizontal line between the chatbox and RecyclerView -->
+    <View
+        android:id="@+id/ca_hz_line"
+        android:layout_marginTop="10dp"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="#dfdfdf"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/layout_chatbox"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/layout_chatbox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:minHeight="48dp"
+        android:background="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <EditText
+            android:id="@+id/ca_edittext_chatbox"
+            android:hint="Dertleş..."
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:maxLines="6"
+            android:maxLength="240"/>
+
+        <!-- <Button
+            android:id="@+id/ca_button_chatbox_send"
+            android:text="GÖNDER"
+            android:textSize="14dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:layout_width="64dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:layout_gravity="bottom" /> -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="4dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+            <ImageButton
+                android:id="@+id/ca_button_chatbox_send"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:background="#f5f5f5"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

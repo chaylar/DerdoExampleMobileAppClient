@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    android:tag="nuisance_list_item_view_button"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:text="TEST"
+
+    android:textSize="14dp"
+    android:paddingHorizontal="4dp"
+    android:background="@drawable/button_bg_raw_rc"
+    android:textAllCaps="false"
+    android:textColor="#000000"
+    />

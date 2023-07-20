@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tg.derdoapp.ShowCaseActivity"
+    android:background="#f5f5f5">
+
+    <include
+        android:id="@+id/include_logo"
+        layout="@layout/page_upper_icon"
+        android:layout_width="100dp"
+        android:layout_height="46dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/settings_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="6dp"
+        app:layout_constraintTop_toBottomOf="@+id/include_logo">
+
+        <include
+            layout="@layout/helper_daily_greetings_part" />
+
+        <LinearLayout
+            android:id="@+id/settingsContainerLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right|center_vertical">
+
+            <ImageButton
+                android:id="@+id/showcaseSettingsIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:layout_marginRight="10dp"
+                android:background="#f5f5f5"
+                app:srcCompat="@drawable/db_settings_icon" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/showcase_show_section"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginVertical="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/settings_container"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout_ok_nok_container"
+        >
+
+        <RelativeLayout
+            android:id="@+id/imageTextSection"
+            android:layout_height="match_parent"
+            android:padding="2dp"
+            android:layout_width="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/showcaseSettingsIcon"
+            >
+
+            <ImageView
+                android:id="@+id/profileImageViewButton"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:padding="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                android:background="@drawable/pf_imagebt_rounded_corner"
+                app:srcCompat="@drawable/pf_1"
+                />
+
+            <TextView
+                android:id="@+id/showcaseNameView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/profileImageViewButton"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_weight=".5"
+                android:gravity="center"
+                android:padding="2dp"
+                android:shadowColor="#000000"
+                android:shadowRadius="10"
+                android:text="Feyza, 33"
+                android:textColor="#ffffff"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="parent" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignEnd="@+id/profileImageViewButton"
+                android:layout_alignRight="@+id/profileImageViewButton"
+                android:layout_alignBottom="@+id/profileImageViewButton"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                android:layout_marginBottom="4dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imageLocationIco"
+                    android:layout_width="wrap_content"
+                    android:visibility="invisible"
+                    android:layout_height="20dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:layout_gravity="center"
+                    android:src="@drawable/twotone_location_on_white_18dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintVertical_bias="0.0"
+                    android:layout_marginBottom="2dp"
+                    />
+
+                <TextView
+                    android:id="@+id/showcaseDistanceText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/imageLocationIco"
+                    android:layout_alignRight="@+id/imageLocationIco"
+                    android:layout_alignBottom="@+id/imageLocationIco"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight=".5"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:shadowColor="#000000"
+                    android:shadowRadius="10"
+                    android:text=""
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="parent"
+                    android:layout_marginBottom="2dp"/>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_ok_nok_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/include_nav_menu"
+        >
+
+        <ImageButton
+            android:id="@+id/greetings_nok_button"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight=".5"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:layout_marginRight="4dp"
+            android:paddingLeft="12dp"
+            android:background="#f5f5f5"
+            android:src="@drawable/nok_n_rct" />
+
+        <ImageButton
+            android:id="@+id/greetings_ok_button"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight=".5"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="4dp"
+            android:paddingRight="12dp"
+            android:background="#f5f5f5"
+            android:src="@drawable/ok_n_rct" />
+
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/no_search_result_ll"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/settings_container"
+        app:layout_constraintBottom_toTopOf="@id/include_nav_menu"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:gravity="center"
+            android:layout_marginHorizontal="10dp"
+            android:padding="2dp"
+            android:paddingHorizontal="4dp"
+            android:text="Aradığın kriterlerde gösterecek yeni birini bulamadık :("
+            android:textSize="20dp"/>
+
+        <TextView
+            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:gravity="center"
+            android:layout_marginHorizontal="10dp"
+            android:padding="2dp"
+            android:paddingHorizontal="4dp"
+            android:text="Arama ayarlarını değiştirmeye ne dersin derdo?"
+            android:textSize="20dp"/>
+
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/sc_private_mode_on_tb"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/settings_container"
+        app:layout_constraintBottom_toTopOf="@id/include_nav_menu"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:gravity="center"
+            android:layout_marginHorizontal="10dp"
+            android:padding="2dp"
+            android:paddingHorizontal="4dp"
+            android:text="Arama yapmak ve aramalarda görünebilmek için Görünmezlik Modu'nu kapatman gerekiyor."
+            android:textSize="20dp"/>
+
+        <ImageButton
+            android:id="@+id/sc_private_mode_settings_switch_ib"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="8dp"
+            android:background="#f5f5f5"
+            android:gravity="center"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/switch_on"
+            />
+
+    </TableLayout>
+
+    <include
+        android:id="@+id/include_nav_menu"
+        layout="@layout/navigation_manu"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.8"
+            android:background="#000000" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminate="true" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

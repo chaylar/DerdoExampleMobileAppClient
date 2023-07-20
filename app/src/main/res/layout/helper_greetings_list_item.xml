@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_item_1"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:layout_marginTop="8dp"
+    android:background="@drawable/underline_bg_layer"
+>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/helper_greetings_list_item_profile_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/pf_1"
+        android:layout_marginLeft="12dp"
+        />
+
+    <TableLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".6"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="4dp"
+        >
+
+        <LinearLayout>
+            <TableLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".6"
+                >
+
+                <TableLayout>
+
+                    <LinearLayout>
+
+                        <TextView
+                            android:id="@+id/helper_greetings_list_item_user_name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5"
+                            android:layout_gravity="left"
+                            android:text="Walter, 42"
+                            android:textColor="#000000"
+                            android:textSize="22dp"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        >
+
+                        <ImageView
+                            android:id="@+id/imageLocationIco"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:layout_gravity="left"
+                            android:layout_marginBottom="6dp"
+                            android:paddingVertical="7dp"
+                            android:maxHeight="30dp"
+                            android:src="@drawable/location_grey_1"
+                            />
+
+                        <TextView
+                            android:id="@+id/helper_greetings_list_item_distance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:gravity="left"
+                            android:layout_marginLeft="4dp"
+                            android:text="1 km"
+                            android:textSize="18dp"
+                            android:textColor="#7f7f7f" />
+
+                    </LinearLayout>
+
+                </TableLayout>
+
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:paddingBottom="4dp">
+
+                <ImageButton
+                    android:id="@+id/helper_greetings_list_item_nok_imgbutton"
+                    android:layout_width="0dp"
+                    android:tag="greetings_nok"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:padding="2dp"
+                    android:background="#f5f5f5"
+                    android:src="@drawable/reject_0305" />
+
+                <ImageButton
+                    android:id="@+id/helper_greetings_list_item_ok_imgbutton"
+                    android:layout_width="0dp"
+                    android:tag="greetings_ok"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:background="#f5f5f5"
+                    android:padding="2dp"
+                    android:layout_marginLeft="16dp"
+                    android:src="@drawable/greet_0305" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </TableLayout>
+</LinearLayout>

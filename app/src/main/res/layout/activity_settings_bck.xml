@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity"
+    android:background="#f5f5f5"
+    android:layout_gravity="center"
+    >
+
+    <LinearLayout
+        android:id="@+id/settings_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:layout_gravity="center_horizontal"
+        >
+
+        <ImageButton
+            android:id="@+id/settings_back_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".1"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="4dp"
+            android:padding="4dp"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            android:scaleType="fitCenter"
+            android:background="#f5f5f5"
+            app:srcCompat="@drawable/bck_but_wtail" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".25"
+            />
+
+        <include
+            android:id="@+id/include_logo"
+            layout="@layout/page_upper_icon"
+            android:layout_weight=".3"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            />
+        
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".35"
+            />
+
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/settings_content_holder"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_toolbar">
+
+        <TextView
+            android:id="@+id/settings_dialog_nuisances_title_text"
+            android:layout_width="fill_parent"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="6dp"
+            android:textSize="18dp"
+            android:layout_height="wrap_content"
+            android:text="@string/nuisances_question_title"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintHorizontal_bias="0.498"
+            android:orientation="horizontal"
+            >
+
+        <ListView
+            android:id="@+id/nuisances_list"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="8dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:divider="#f5f5f5"
+            android:dividerHeight="4dp"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            />
+
+        <ListView
+            android:id="@+id/nuisances_list_sec"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="8dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:divider="#f5f5f5"
+            android:dividerHeight="4dp"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_margin="32dp">
+
+            <View
+                android:layout_weight=".2"
+                android:layout_width="0dp"
+                android:layout_height="2dp"/>
+
+            <View
+                android:layout_weight=".6"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:background="#c0c0c0"/>
+
+            <View
+                android:layout_weight=".2"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/settings_dialog_search_title_text"
+            android:layout_width="fill_parent"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_height="wrap_content"
+            android:text="@string/search_question_title"
+
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".12"
+            android:gravity="left"
+            android:text="@string/settings_gender_activity_question"
+            android:textSize="16dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="6dp"
+
+            />
+
+        <LinearLayout
+            android:id="@+id/settings_gender_select_holder"
+            android:layout_marginTop="4dp">
+
+            <Button
+                android:id="@+id/settings_gender_select_female"
+                android:tag="settings_gender_select"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".26"
+                android:gravity="center"
+                android:textSize="14dp"
+                android:paddingHorizontal="4dp"
+                android:layout_marginHorizontal="4dp"
+                android:text="@string/profile_gender_female"
+                android:background="@drawable/button_bg_raw_rc"
+                android:textColor="#000000"
+                android:textAllCaps="false"
+                />
+
+            <Button
+                android:id="@+id/settings_gender_select_male"
+                android:tag="settings_gender_select"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".26"
+                android:gravity="center"
+                android:textSize="14dp"
+                android:paddingHorizontal="4dp"
+                android:layout_marginHorizontal="4dp"
+                android:text="@string/profile_gender_male"
+                android:background="@drawable/button_bg_raw_rc"
+                android:textColor="#000000"
+                android:textAllCaps="false"
+                />
+
+            <Button
+                android:id="@+id/settings_gender_select_nopref"
+                android:tag="settings_gender_select"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".26"
+                android:gravity="center"
+                android:textSize="14dp"
+                android:paddingHorizontal="4dp"
+                android:layout_marginHorizontal="4dp"
+                android:text="@string/settings_gender_answer_matters_not"
+                android:background="@drawable/button_bg_raw_rc"
+                android:textColor="#000000"
+                android:textAllCaps="false"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".12"
+            android:gravity="left"
+            android:text="@string/settings_age_preference_question"
+            android:textSize="16dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="6dp"
+            />
+
+        <!-- <SeekBar
+            android:id="@+id/ageRange"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="26dp"
+            android:min="18"
+            android:max="80"
+            android:progress="2"
+            /> -->
+
+        <LinearLayout
+            android:id="@+id/age_seek_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/age_seek_min"
+                android:layout_weight=".15"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:gravity="center"
+                android:text=""
+                android:textSize="16dp"
+                />
+
+            <com.ianpinto.androidrangeseekbar.rangeseekbar.RangeSeekBar
+                android:id="@+id/ageRange"
+                android:layout_weight=".7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                app:absoluteMaxValue="90"
+                app:absoluteMinValue="18"
+
+                android:gravity="center"
+                android:layout_marginVertical="14dp"
+
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+
+                app:valuesAboveThumbs="false"
+                app:textAboveThumbsColor="#06a94d"
+                app:thumbShadow="false"
+                app:thumbShadowBlur="2dp"
+                app:thumbShadowColor="@color/primary_material_dark"
+                app:thumbShadowXOffset="1dp"
+                app:thumbShadowYOffset="2dp"
+                app:showLabels="false"
+                app:activeColor="#06a94d"
+                app:barHeight="2dp"
+                app:thumbPressed="@drawable/thumb_circle_pressed"
+                app:thumbNormal="@drawable/thumb_circle"
+                app:thumbDisabled="@drawable/thumb_circle"
+                app:alwaysActive="true"
+
+                />
+
+            <!-- <com.innovattic.rangeseekbar.RangeSeekBar
+                android:id="@+id/ageRange"
+                android:layout_weight=".7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                app:rsb_initialMaxThumbValue="40"
+                app:rsb_initialMinThumbValue="20"
+                app:rsb_maxThumbDrawable="@drawable/thumb_circle"
+                app:rsb_maxThumbOffsetHorizontal="2dp"
+                app:rsb_minRange="10"
+                app:rsb_minThumbDrawable="@drawable/thumb_circle"
+                app:rsb_minThumbOffsetHorizontal="-2dp"
+                app:rsb_trackColor="#888"
+                app:rsb_trackSelectedColor="#06a94d"
+                app:rsb_trackSelectedThickness="4dp"
+                app:rsb_trackThickness="2dp"
+
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="26dp"
+                android:min="18"
+                android:max="80"
+                android:progress="2"/> -->
+
+            <TextView
+                android:id="@+id/age_seek_max"
+                android:layout_weight=".15"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:gravity="center"
+                android:text=""
+                android:textSize="16dp"
+                />
+
+        </LinearLayout>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/saveSettingsButtonHolder"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/include_nav_menu"
+
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        >
+
+    <Button
+        android:id="@+id/saveSettingsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="@drawable/button_bg_rounded_corners_save_button"
+        android:text="@string/settings_save_button_text"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:paddingHorizontal="40dp"
+        android:paddingBottom="2dp"
+        />
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/include_nav_menu"
+        layout="@layout/navigation_manu"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="0dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

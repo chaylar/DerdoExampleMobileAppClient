@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tg.derdoapp.ProfileNameActivity"
+    android:background="#f5f5f5"
+    >
+
+    <include
+        android:id="@+id/include_logo"
+        layout="@layout/page_upper_icon"
+        android:layout_width="100dp"
+        android:layout_height="46dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/input_gender_title_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center"
+        android:text="@string/profile_gender_activity_question"
+        android:textColor="#545454"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.254" />
+
+    <LinearLayout
+        android:id="@+id/gender_select_buttons_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        app:layout_constraintTop_toBottomOf="@+id/input_gender_title_textView">
+        
+        <View
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight=".15"
+            />
+
+        <Button
+            android:id="@+id/profileGenderFemale"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight=".3"
+
+            android:background="@drawable/button_bg_raw"
+            android:text="@string/profile_gender_female"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:paddingLeft="8dp"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight=".1"
+            />
+
+        <Button
+            android:id="@+id/profileGenderMale"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight=".3"
+            android:background="@drawable/button_bg_raw"
+            android:text="@string/profile_gender_male"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:paddingLeft="8dp"
+            app:layout_constraintStart_toEndOf="@+id/profileGenderFemale" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight=".15"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/gender_select_buttons_holder"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        >
+        
+    <Button
+        android:id="@+id/profileGenderOK"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:background="@drawable/button_bg_rounded_corners"
+        android:text="@string/profile_name_activity_button_ok"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+
+         />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

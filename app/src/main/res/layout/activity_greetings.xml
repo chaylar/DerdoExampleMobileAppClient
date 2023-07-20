@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tg.derdoapp.GreetingsActivity"
+    android:background="#f5f5f5"
+    android:layout_gravity="center">
+
+    <include
+        android:id="@+id/include_logo"
+        layout="@layout/page_upper_icon"
+        android:layout_width="100dp"
+        android:layout_height="46dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/allContentHolder"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight=".8"
+        android:gravity="center"
+
+        app:layout_constraintTop_toBottomOf="@+id/include_logo"
+        app:layout_constraintBottom_toTopOf="@+id/include_nav_menu"
+
+        >
+
+        <!-- <include
+            android:id="@+id/include_social_nav_bar"
+            layout="@layout/social_requests_nav_menu" /> -->
+
+        <LinearLayout
+            android:id="@+id/settings_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="6dp"
+            app:layout_constraintTop_toBottomOf="@+id/include_logo">
+
+            <!-- <include
+                layout="@layout/helper_daily_greetings_part" /> -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical">
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TableLayout>
+            <TextView
+                android:textColor="#000000"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="12dp"
+                android:textStyle="bold"
+                android:textSize="26dp"
+                android:text="Selam Verenler"
+                android:textAllCaps="false"
+                />
+        </TableLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/greetings_list_view_recycler"
+            android:scrollbars="vertical"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <!-- GREETINGS AREA -->
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </TableLayout>
+
+    <include
+        android:id="@+id/include_nav_menu"
+        layout="@layout/navigation_manu"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="0dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/allContentHolder"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

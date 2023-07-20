@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name"></string>
+    <string name="login_app_name"></string>
+    <string name="profile_add_photo"></string>
+    <string name="profile_select_photo"></string>
+    <string name="login_tv_slogan"></string>
+    <string name="action_settings"></string>
+    <string name="profilea_name_input_title"></string>
+    <string name="profilea_birthdate_input_title"></string>
+    <string name="nuisances_question_title"></string>
+    <string name="search_question_title"></string>
+    <string name="general_activity_continue"></string>
+    <string name="profile_name_activity_question"></string>
+    <string name="profile_gender_activity_question"></string>
+    <string name="settings_gender_activity_question"></string>
+    <string name="settings_gender_answer_matters_not"></string>
+    <string name="settings_age_preference_question"></string>
+    <string name="profile_gender_female"></string>
+    <string name="profile_gender_male"></string>
+    <string name="settings_dialog_search_gender_question_options_title"></string>
+    <string name="profile_name_activity_button_ok"></string>
+    <string name="profile_name_activity_prevention_dialog"></string>
+
+    <string name="chat_activity_upper_back_button">&lt;</string>
+    <string name="chat_activity_upper_delete_block_button"></string>
+    <string name="profile_birthdate_activity_question"></string>
+    <string name="profile_birthdate_activity_button_ok"></string>
+    <string name="settings_save_button_text"></string>
+    <string name="profile_birthdate_activity_restriction_dialog"></string>
+    <string name="profile_birthdate_activity_restriction_wrong_text_dialog"></string>
+
+    <string name="profile_empty_username_error_message"></string>
+    <string name="profile_empty_birthdate_error_message"></string>
+    <string name="profile_info_title"></string>
+    <string name="account_settings_title"></string>
+    <string name="account_settings_notifications"></string>
+    <string name="account_settings_private"></string>
+    <string name="account_settings_exit"></string>
+    <string name="account_settings_delete_account"></string>
+    <string name="general_dialog_delete_welcome"></string>
+    <string name="profile_ext_logout_warning"></string>
+    <string name="profile_ext_delete_acc_warning"></string>
+    <string name="chat_delete_history_warning"></string>
+
+    <string name="incoming_requests_messages_button_text"></string>
+    <string name="incoming_requests_greetings_button_text"></string>
+
+    <string name="title_activity_incoming_requests">IncomingRequestsActivity</string>
+    <string name="gallery_choose_picture_dialog_box_message"></string>
+
+    <string name="error_activity_standard_text"></string>
+    <string name="title_activity_error">ErrorActivity</string>
+
+    <string name="loading_activity_standard_text"></string>
+    <string name="loading_activity_profile_photo_text"></string>
+
+    <string name="location_info_popup_warning"></string>
+    <string name="location_info_disabled_warning"></string>
+
+    <string name="messages_activity_no_content_text"></string>
+    <string name="greetings_activity_no_content_text"></string>
+
+    <!-- SYSTEM -->
+    <string name="facebook_app_id"></string>
+    <string name="fb_login_protocol_scheme"></string>
+
+    <string name="app_server_address"></string>
+    <string name="socket_server_address"></string>
+
+    <string name="admob_unit"></string>
+    <string name="admob_unit_video"></string>
+
+</resources>

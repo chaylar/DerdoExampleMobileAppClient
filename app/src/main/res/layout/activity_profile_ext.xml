@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileExtActivity"
+    android:background="#f5f5f5"
+    >
+
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:translationZ="100dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.8"
+            android:background="#000000" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminate="true" />
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/include_logo"
+        layout="@layout/page_upper_icon"
+        android:layout_width="100dp"
+        android:layout_height="46dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/contentWrapperProfileExt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight=".8"
+        app:layout_constraintTop_toBottomOf="@+id/include_logo"
+        app:layout_constraintBottom_toTopOf="@+id/include_nav_menu" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            >
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight=".2"
+                        />
+
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight=".6"
+                        android:background="@drawable/pf_imagebt_rounded_corner"
+                        android:padding="2dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginHorizontal="40dp"
+                        >
+
+                        <RelativeLayout
+                            android:id="@+id/imageTextSection"
+                            android:layout_height="match_parent"
+                            android:padding="2dp"
+                            android:layout_width="wrap_content"
+                            app:layout_constraintStart_toStartOf="parent"
+                            >
+
+                            <ImageButton
+                                android:id="@+id/profileImageViewButton"
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:scaleType="fitCenter"
+                                app:srcCompat="@drawable/profile_icon_test"
+                                android:padding="8dp"
+                                android:background="@drawable/pf_imagebt_rounded_corner"/>
+
+                            <!-- <ImageButton
+                                android:id="@+id/profileImagePhotoIcon"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:adjustViewBounds="true"
+                                android:scaleType="fitCenter"
+                                android:padding="4dp"
+
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                android:layout_alignParentRight="true"
+                                app:layout_constraintVertical_bias="0.0"
+                                app:srcCompat="@drawable/db_photograph_icon"
+                                /> -->
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight=".2"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:padding="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginHorizontal="40dp"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/profile_change_photo"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".25"
+                            />
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5"
+                            android:layout_marginHorizontal="4dp"
+                            android:text="Fotoğrafı Değiştir"
+                            android:textColor="#ffffff"
+                            android:textStyle="bold"
+                            android:background="@drawable/profiletxt_rounded_corners_buttonstyl_bg_green"
+                            />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".25"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:padding="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginHorizontal="40dp"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/profile_delete_photo"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".25"
+                            />
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5"
+                            android:layout_marginHorizontal="4dp"
+                            android:text="Fotoğrafı Sil"
+                            android:textColor="#ffffff"
+                            android:textStyle="bold"
+                            android:background="@drawable/profiletxt_rounded_corners_buttonstyl"
+                            />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".25"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:padding="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginHorizontal="40dp"
+                    android:background="@drawable/profiletxt_rounded_corners"
+                    >
+
+                    <TextView
+                        android:layout_gravity="start|center_vertical"
+                        android:gravity="start"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".4"
+                        android:layout_marginHorizontal="4dp"
+                        android:text="Kullanıcı Adın"
+                        android:textColor="#06a94d"
+                        android:textStyle="bold"
+                        />
+
+                    <LinearLayout
+                        android:layout_weight=".6"
+                        android:orientation="horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        >
+
+                        <TextView
+                            android:id="@+id/input_name_title_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="name_placeholder"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:padding="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginHorizontal="40dp"
+                    android:background="@drawable/profiletxt_rounded_corners"
+                    >
+
+                    <TextView
+                        android:layout_gravity="start|center_vertical"
+                        android:gravity="start"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".4"
+                        android:layout_marginHorizontal="4dp"
+                        android:text="Doğum Tarihin"
+                        android:textColor="#06a94d"
+                        android:textStyle="bold"
+                        />
+
+                    <LinearLayout
+                        android:layout_weight=".6"
+                        android:orientation="horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        >
+
+                        <TextView
+                            android:id="@+id/input_birthdate_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="birthdate_placeholder"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:padding="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginHorizontal="40dp"
+                    android:background="@drawable/profiletxt_rounded_corners"
+                    >
+
+                    <TextView
+                        android:layout_gravity="start|center_vertical"
+                        android:gravity="start"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".4"
+                        android:layout_marginHorizontal="4dp"
+                        android:text="Cinsiyetin"
+                        android:textColor="#06a94d"
+                        android:textStyle="bold"
+                        />
+
+                    <LinearLayout
+                        android:layout_weight=".6"
+                        android:orientation="horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        >
+
+                        <TextView
+                            android:id="@+id/input_gender_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="birthdate_placeholder"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:padding="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginHorizontal="40dp"
+                    android:background="@drawable/profiletxt_rounded_corners"
+                    >
+
+                    <TextView
+                        android:layout_gravity="start|center_vertical"
+                        android:gravity="start"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".4"
+                        android:layout_marginHorizontal="4dp"
+                        android:text="E-Posta"
+                        android:textColor="#06a94d"
+                        android:textStyle="bold"
+                        />
+
+                    <LinearLayout
+                        android:layout_weight=".6"
+                        android:orientation="horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        >
+
+                        <TextView
+                            android:id="@+id/input_email_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="email_placeholder"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:padding="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginHorizontal="40dp"
+                    android:background="@drawable/profiletxt_rounded_corners"
+                    >
+
+                    <TextView
+                        android:layout_gravity="start|center_vertical"
+                        android:gravity="start"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".4"
+                        android:layout_marginHorizontal="4dp"
+                        android:text="Bildirimler"
+                        android:textColor="#06a94d"
+                        android:textStyle="bold"
+                        />
+
+                    <LinearLayout
+                        android:layout_weight=".6"
+                        android:orientation="horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:foregroundGravity="center"
+                        >
+
+                        <ImageButton
+                            android:id="@+id/notifications_settings_switch_ib"
+                            android:layout_width="wrap_content"
+                            android:layout_height="19dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:layout_marginLeft="8dp"
+                            android:background="#f5f5f5"
+                            android:gravity="center"
+                            android:src="@drawable/switch_on"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:padding="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginHorizontal="40dp"
+                    android:background="@drawable/profiletxt_rounded_corners"
+                    >
+
+                    <TextView
+                        android:id="@+id/privateModeDisplayTitlePE"
+                        android:layout_gravity="start|center_vertical"
+                        android:gravity="start"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".4"
+                        android:layout_marginHorizontal="4dp"
+                        android:text="@string/account_settings_private"
+                        android:textColor="#06a94d"
+                        android:textStyle="bold"
+                        android:maxLines="1"
+                        />
+
+                    <LinearLayout
+                        android:layout_weight=".6"
+                        android:orientation="horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:foregroundGravity="center"
+                        >
+
+                        <ImageButton
+                            android:id="@+id/private_mode_settings_switch_ib"
+                            android:layout_width="wrap_content"
+                            android:layout_height="19dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:layout_marginLeft="8dp"
+                            android:background="#f5f5f5"
+                            android:gravity="center"
+                            android:src="@drawable/switch_on"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginHorizontal="40dp"
+
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/logout_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".25"
+                            />
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5"
+                            android:layout_marginHorizontal="4dp"
+                            android:text="Çıkış Yap"
+                            android:textColor="#ffffff"
+                            android:textStyle="bold"
+                            android:background="@drawable/profiletxt_rounded_corners_buttonstyl"
+                            />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".25"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/profile_ext_delete_acc_buttn"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:padding="10dp"
+                    android:layout_marginHorizontal="40dp"
+                    android:layout_marginBottom="10dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".25"
+                            />
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5"
+                            android:layout_marginHorizontal="4dp"
+                            android:text="Hesabımı Sil"
+                            android:textColor="#ffffff"
+                            android:textStyle="bold"
+                            android:background="@drawable/profiletxt_rounded_corners_buttonstyl_deleteacc"
+                            />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".25"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </TableLayout>
+
+        </ScrollView>
+
+    </TableLayout>
+
+
+    <include
+        android:id="@+id/include_nav_menu"
+        layout="@layout/navigation_manu"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="0dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

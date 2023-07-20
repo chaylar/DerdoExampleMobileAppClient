@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+
+android:layout_width="match_parent"
+android:layout_height="0dp"
+android:layout_marginVertical="4dp"
+app:layout_constraintTop_toBottomOf="@+id/settings_container"
+app:layout_constraintBottom_toTopOf="@+id/linearLayout_ok_nok_container">
+
+    <RelativeLayout
+        android:id="@+id/imageTextSection"
+        android:layout_height="match_parent"
+        android:padding="2dp"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showcaseSettingsIcon"
+        >
+
+        <ImageView
+            android:id="@+id/profileImageViewButton"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:padding="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            android:background="@drawable/pf_imagebt_rounded_corner"
+            app:srcCompat="@drawable/pf_1"
+            />
+
+        <TextView
+            android:id="@+id/showcaseNameView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/profileImageViewButton"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_weight=".5"
+            android:gravity="center"
+            android:padding="2dp"
+            android:shadowColor="#000000"
+            android:shadowRadius="10"
+            android:text="Feyza, 33"
+            android:textColor="#ffffff"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="parent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignEnd="@+id/profileImageViewButton"
+            android:layout_alignRight="@+id/profileImageViewButton"
+            android:layout_alignBottom="@+id/profileImageViewButton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            android:layout_marginBottom="4dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imageLocationIco"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center"
+                android:src="@drawable/iconfinder_social"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/showcaseDistanceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/imageLocationIco"
+                android:layout_alignRight="@+id/imageLocationIco"
+                android:layout_alignBottom="@+id/imageLocationIco"
+                android:layout_marginRight="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_weight=".5"
+                android:gravity="center"
+                android:padding="2dp"
+                android:shadowColor="#000000"
+                android:shadowRadius="10"
+                android:text="5 km"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="parent" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</TableLayout>

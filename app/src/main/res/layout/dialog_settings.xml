@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/dialog_background"
+    android:orientation="vertical"
+    android:paddingVertical="10dp"
+    >
+    
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/settings_dialog_nuisances_title_text"
+            android:layout_width="fill_parent"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_height="wrap_content"
+            android:text="@string/nuisances_question_title"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <ListView
+            android:id="@+id/nuisances_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="4dp"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:divider="#f5f5f5"
+            android:dividerHeight="2dp"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            />
+
+        <TextView
+            android:id="@+id/settings_dialog_search_title_text"
+            android:layout_width="fill_parent"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:textSize="18dp"
+            android:layout_height="wrap_content"
+            android:text="@string/search_question_title"
+
+            />
+
+        <LinearLayout
+            android:layout_marginTop="4dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".12"
+                android:gravity="left"
+                android:text="Cinsiyet:"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".26"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:text="@string/profile_gender_female"
+                />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".26"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:text="@string/profile_gender_male"
+                />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".26"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:text="Farketmez"
+                />
+
+        </LinearLayout>
+
+    </TableLayout>
+
+</RelativeLayout>

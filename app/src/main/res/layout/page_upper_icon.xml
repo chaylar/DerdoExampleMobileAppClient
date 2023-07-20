@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:showIn="@layout/activity_main"
+    android:layout_centerVertical="true"
+    android:layout_centerHorizontal="true"
+    >
+
+    <ImageButton
+        android:id="@+id/derdoLogoPageUp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="#f5f5f5"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="0dp"
+        android:padding="4dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@raw/derdooo"/>
+
+</LinearLayout>
